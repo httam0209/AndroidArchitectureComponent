@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    // App build config
+    ext.minSdkVersion = 16
+    ext.compileSdkVersion = 27
+    ext.targetSdkVersion = 27
+    ext.buildToolsVersion = '27.0.3'
+
+    ext.graleBuild = '3.0.1'
+
+    // App dependencies
+    ext.supportLibraryVersion = '27.0.2'
+    ext.dagger      = '2.13'
+    ext.contrainLayout = '1.0.2'
+    ext.retrofit = '2.3.0'
+    ext.arch = '1.0.0'
+    ext.picasso = '2.5.2'
+    ext.httpLogging = '3.9.1'
+    ext.javaanotation = '1.0'
+    ext.gson = '2.8.2'
+    ext.butterknife = '8.8.1'
+
+    // Resource
+    ext.BASE_API_URL = "\"https://api.github.com/\""
+
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$graleBuild"
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
